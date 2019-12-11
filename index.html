@@ -43,10 +43,10 @@
 		var formatTime = function(currentDuration){
 			
 			// If the current duration is less than 60 seconds set value of 'minutes' to 0, else calculate the number of minutes in the current duration
-			var minutes = currentDuration < 60 ? 0 : parseInt(currentDuration/60, 10);
+			var minutes = parseInt(currentDuration/60, 10);
 
 			// If the current duration is less than 60 seconds set the value of 'seconds' to the current duration, else calculate how many seconds are left after accounting for sull minutes
-			var seconds = currentDuration < 60 ? currentDuration : parseInt(currentDuration / minutes - 60, 10);
+			var seconds = parseInt(currentDuration / minutes - 60, 10);
 
 			// Return the minutes and seconds, adding a 0 to any single digit seconds
 			return minutes + ':' + seconds.toString().padStart(2, '0');
