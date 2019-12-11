@@ -59,7 +59,7 @@
 			}
 
 			// Return the formatted time
-			return formatTime(data.timer);
+			return '<h1>' + formatTime(data.timer) + '</h1>';
 
 		};
 
@@ -97,7 +97,7 @@
 					window.clearInterval(countdown);
 				}
 
-			}, 250);
+			},1000);
 		};
 
 
