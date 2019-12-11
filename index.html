@@ -46,7 +46,7 @@
 			var minutes = parseInt(currentDuration / 60, 10);
 
 			// Calculate the number of seconds beyond the whole minutes
-			var seconds = parseInt(currentDuration / minutes - 60, 10);
+			var seconds = currentDuration < 60 ? currentDuration : parseInt(currentDuration / minutes - 60, 10);
 
 			// Return the minutes and seconds, adding a 0 to any single digit seconds
 			return minutes + ':' + seconds.toString().padStart(2, '0');
